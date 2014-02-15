@@ -1,0 +1,28 @@
+1.Chefのリポジトリ(Cookbook)を作成する。(PC側)
+# cd ~/chef
+# knife solo init chef-repo
+
+2.NodeをChef対応にする。
+※事前準備として仮想マシンにホスト名設定＆公開鍵設定
+#vagrant ssh-config --host <ホスト名> >> ~/.ssh/config
+
+# cd chef-repo/
+# knife solo prepare chef
+
+3.Cookbookを作成する。
+# knife cookbook create redhat -o site-cookbooks/
+
+4.CookbookをNodeに反映させる。
+# cd ~/chef/chef-repo/nodes
+# vi chef.json
+　
+　・chef.jsonにレシピを追加する。
+　{
+        "run_list":[
+                "recipe[redhat]"
+        ]
+  }
+
+
+
+　

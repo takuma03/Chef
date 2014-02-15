@@ -1,0 +1,2 @@
+RPM検索サイト
+http://rpmfind.net/linux/rpm2html/search.php?query=perf&submit=Search+...&system=&arch=
