@@ -4,9 +4,9 @@
 
 2.NodeをChef対応にする。
 ※事前準備として仮想マシンにホスト名設定＆公開鍵設定
-#vagrant ssh-config --host <ホスト名> >> ~/.ssh/config
+#vagrant ssh-config --host chef >> ~/.ssh/config
 
-# cd chef-repo/
+# cd ../chef-repo/
 # knife solo prepare chef
 
 3.Cookbookを作成する。
@@ -22,6 +22,21 @@
                 "recipe[redhat]"
         ]
   }
+
+
+
+■レシピの移動
+cp -p ~/Desktop/Chef/recipes/default2.rb ~/chef_lessons/chef-repo/site-cookbooks/redhat/recipes/default.rb
+
+■資材のコピー
+cp -p ~/Desktop/Chef/templates/*.erb ~/chef_lessons/chef-repo/site-cookbooks/redhat/templates/.
+
+■rpmファイルの移送
+scp -p ~/Desktop/Chef/rpm/*.rpm chef:~/.
+
+
+
+
 
 
 

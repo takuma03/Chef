@@ -1,2 +1,8 @@
 RPM検索サイト
 http://rpmfind.net/linux/rpm2html/search.php?query=perf&submit=Search+...&system=&arch=
+
+kernel-2.6.32-431.5.1.el6.x86_64.rpm
+kernel-devel-2.6.32-431.5.1.el6.x86_64.rpm
+kernel-firmware-2.6.32-431.5.1.el6.noarch.rpm
+kernel-headers-2.6.32-431.5.1.el6.x86_64.rpm
+perf-2.6.32-431.5.1.el6.x86_64.rpm
